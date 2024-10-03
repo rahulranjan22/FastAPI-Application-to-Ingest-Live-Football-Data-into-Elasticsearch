@@ -1,0 +1,11 @@
+version: '3'
+services:
+  fastapi:
+    build: .
+    container_name: fastapi-app
+    ports:
+      - "8000:80"
+    environment:
+      - ELASTICSEARCH_HOST=<hostname>
+      - ELASTICSEARCH_USERNAME=username
+      - ELASTICSEARCH_PASSWORD=<elastic user password>
